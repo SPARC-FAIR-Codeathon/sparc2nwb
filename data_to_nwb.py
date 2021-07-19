@@ -4,6 +4,7 @@ import numpy as np
 import datetime import datetime
 import pynwb
 import logging
+import pickle
 from pynwb.device import Device
 from pynwb.ecephys import ElectrodeGroup
 from pynwb import NWBFile, NWBHDF5IO
@@ -76,9 +77,7 @@ def main():
         filename = file_path.split('/')[4] +'_'+ file_path.split('/')[-1].split('.')[0]
         nwb_filename = ''+filename+'.nwb'
 
-        with NWBHDF5IO(nwb_filename, 'w') as io:
-            io.write(nwb_file)
-            logger.info('Saved', nwb_filename)
+        pickle.dump(nwb_file, open(filename, 'wb'))
 
 if __name__ == '__main__':
     log_format = '%(levelname)s %(asctime)s - %(message)s'
@@ -88,3 +87,4 @@ if __name__ == '__main__':
                         filemode='w')
     logger = logging.getLogger()
     main()
+    
