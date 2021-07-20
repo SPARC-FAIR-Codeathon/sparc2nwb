@@ -2,11 +2,12 @@ import os
 import pandas as pd
 import numpy as np
 import datetime import datetime
-import pynwb
 import logging
+import pickle
+from dateutil.tz import tzlocal
 from pynwb.device import Device
 from pynwb.ecephys import ElectrodeGroup
-from pynwb import NWBFile, NWBHDF5IO
+from pynwb import NWBFile
 
 def convert_to_nwb(data, nwb_file):
     
@@ -59,26 +60,33 @@ def convert_to_nwb(data, nwb_file):
                 
     return (nwb_file)
 
-def main():
-    
-    curr_dir = os.getcwd()
-    manifest_filepath = curr_dir+'files/primary/manifest.xlsx'
-    manifest_data = pd.read_excel(manifest_filepath)
+def main(standard_path, manifest_data):
     for d in manifest_data['filename']:
-        nwb_file = NWBFile(session_description = 'NWB File Format - In Vitro Imaging of Mechanosensitive Submucous Neurons in the Porcine Colon.', 
-                   identifier = 'nwbfile_1',
-                   session_start_time = datetime.now())
-
-        standard_path = ''
         file_path = standard_path+d
         data = pd.read_excel(file_path, sheet_name='responses')
-        nwb_file = convert_to_nwb(data, nwb_file)
-        filename = file_path.split('/')[4] +'_'+ file_path.split('/')[-1].split('.')[0]
-        nwb_filename = ''+filename+'.nwb'
+        file_name = file_path.split('/')[4] +'_'+ file_path.split('/')[-1].split('.')[0]
+        filename = '../nwb_folders/'+file_name+'.nwb'
+        
+        session_start_time = manifest_data[manifest_data['filename'] == d]['timestamp'].values[0]
+        session_timestamp = datetime.strptime(session_start_time[:-1], '%Y-%m-%dT%H:%M:%S.%f')
+        
+        nwb_file = NWBFile(session_description = 'Sample NWB File',
+                        identifier = file_name,
+                        session_start_time = session_timestamp,
+                        file_create_date = datetime.now(tzlocal()),
+                        institution = '',
+                        lab = '',
+                        experimenter = 'Gemma Mazzuoli-Weber',
+                        experiment_description = 'In this study, we investigated the sensitivity of enteric neurons to mechanical '
+                                                    'stimuli comparing tissue samples from porcine proximal and distal colon.',
+                        related_publications = 'https://doi.org/10.26275/0khe-2os4',
+                        keywords = ['mechanosensitivity', 'voltage sensitive dye', 
+                                    'ultrafast neuroimaging technique', 'immunohistochemistry', 
+                                    'enteric nervous system ']
+                        )
 
-        with NWBHDF5IO(nwb_filename, 'w') as io:
-            io.write(nwb_file)
-            logger.info('Saved', nwb_filename)
+        nwb_file = convert_to_nwb(data, nwb_file)    
+        pickle.dump(nwb_file, open(filename, 'wb'))
 
 if __name__ == '__main__':
     log_format = '%(levelname)s %(asctime)s - %(message)s'
@@ -87,4 +95,7 @@ if __name__ == '__main__':
                         format=log_format,
                         filemode='w')
     logger = logging.getLogger()
-    main()
+
+    standard_path = '../Pennsieve-dataset-124-version-2/files/primary/'
+    manifest_data = pd.read_excel(standard_path+'manifest.xlsx')
+    main(standard_path, manifest_data)
