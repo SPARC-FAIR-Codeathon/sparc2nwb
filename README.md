@@ -42,7 +42,7 @@ Our team created the tools and the code to convert data and metadata from an [op
 
 #### Converted metadata includes: 
 1. Study subject ID
-2. Mehcanical stimulus type (i.e., stretch or compression)
+2. Mechanical stimulus type (i.e., stretch or compression)
 3. Specific neuron within a group that responded to stimulus. More descriptors can be added as metadata as needed.
 
 ### Step 2: Extract data from NWB file with Matlab- and Python-based APIs for analyses
