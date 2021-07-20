@@ -1,3 +1,7 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 # sparc2nwb
 
 ### SPARC Data Conversion to NWB Format
@@ -27,3 +31,12 @@ Converted metadata includes:
 4. https://sparc.science/datasets/124?type=dataset&path=files
 5. https://www.protocols.io/view/mechanosensitive-enteric-neurons-incidence-and-abu-bpcamise
 6. https://www.nature.com/articles/s41598-020-70216-6
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[contributors-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[stars-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
+
