@@ -1,16 +1,18 @@
 import os
 import pandas as pd
 import numpy as np
-import datetime import datetime
+from datetime import datetime
 import logging
 import pickle
+import pynwb
 from dateutil.tz import tzlocal
 from pynwb.device import Device
 from pynwb.ecephys import ElectrodeGroup
 from pynwb import NWBFile
 
-def convert_to_nwb(data, nwb_file):
-    
+def convert_to_nwb(data, nwb_file, standard_path, d):
+
+    file_path = standard_path+d
     electrode_groups = list()
     for i in range(len(data)):
         probe_device = Device(name=str(i+1))
@@ -45,7 +47,7 @@ def convert_to_nwb(data, nwb_file):
                 group=groups[i],
                 filtering='none'
         )
-        
+
     for i, col in enumerate(data.columns):
         if col != 'frame':
             data_name = file_path.split('/')[4] +'_'+d.split('/')[-1].split('.')[0]+'_'+col+'_data'
@@ -65,7 +67,7 @@ def main(standard_path, manifest_data):
         file_path = standard_path+d
         data = pd.read_excel(file_path, sheet_name='responses')
         file_name = file_path.split('/')[4] +'_'+ file_path.split('/')[-1].split('.')[0]
-        filename = '../nwb_folders/'+file_name+'.nwb'
+        filename = './nwb_files/'+file_name+'.nwb'
         
         session_start_time = manifest_data[manifest_data['filename'] == d]['timestamp'].values[0]
         session_timestamp = datetime.strptime(session_start_time[:-1], '%Y-%m-%dT%H:%M:%S.%f')
@@ -85,7 +87,7 @@ def main(standard_path, manifest_data):
                                     'enteric nervous system ']
                         )
 
-        nwb_file = convert_to_nwb(data, nwb_file)    
+        nwb_file = convert_to_nwb(data, nwb_file, standard_path, d)
         pickle.dump(nwb_file, open(filename, 'wb'))
 
 if __name__ == '__main__':
@@ -96,6 +98,6 @@ if __name__ == '__main__':
                         filemode='w')
     logger = logging.getLogger()
 
-    standard_path = '../Pennsieve-dataset-124-version-2/files/primary/'
+    standard_path = './data/Pennsieve-dataset-124-version-2/files/primary/'
     manifest_data = pd.read_excel(standard_path+'manifest.xlsx')
     main(standard_path, manifest_data)
