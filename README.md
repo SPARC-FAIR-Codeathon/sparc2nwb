@@ -26,7 +26,7 @@ Our project goal is to improve the readability and accessibility of SPARC data b
 
 ![image](https://user-images.githubusercontent.com/78009407/126270802-c69bea33-3f2a-4739-83ae-80c1acf7d817.png)
 
-The NWB file format allows users to store raw and processed data and associated metadata in a single, standardized format. Common file formats used in experimentation (e.g., .csv, .xlsx, .json, .m, .py) can be converted into .nwb format and the stored file information can then be extracted into the programming language of choice (i.e., Matlab, Python, or C++) for processing and analyses. NWB is a dynamic format and does not have a stable folder structure for storing data across domains. Instead, the folder structure heavily depends on the study experimentation process and the type of data that was collected. 
+The NWB file format allows users to store raw and processed data and associated metadata in a single, standardized format. Common file formats used in experimentation (e.g., .csv, .xlsx, .json, .m, .py) can be converted into .nwb format and the stored file information can then be extracted into the programming language of choice (i.e., Matlab, Python, C++) for processing and analyses. NWB is a dynamic format and does not have a stable folder structure for storing data across domains. Instead, the folder structure heavily depends on the study experimentation process and the type of data that was collected. 
 
 ## Conversion of SPARC data to NWB format
 
@@ -54,10 +54,7 @@ Our team created the tools and the code to convert data and metadata from an [op
 3. https://pynwb.readthedocs.io/en/stable/
 
 ## SPARC2NWB Team
-##### [Marielle Darwin](https://github.com/mldarwin)
-##### [Ananth Reddy](https://github.com/anbhimi)
-##### [Derek Chang](https://github.com/DerekYJC)
-##### [Patrick Chuang](https://github.com/lifestrugglee)
+[Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
 
 [contributors-shield]: https://img.shields.io/github/contributors/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [contributors-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/graphs/contributors
