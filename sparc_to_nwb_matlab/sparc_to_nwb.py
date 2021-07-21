@@ -104,13 +104,11 @@ if __name__ == '__main__':
                         filemode='w')
     logger = logging.getLogger()
 
-#    standard_path = './Pennsieve-dataset-124-version-2/files/primary/'
-    standard_path = sys.argv[1]
+    standard_path = './Pennsieve-dataset-124-version-2/files/primary/'
     manifest_data = pd.read_excel(standard_path+'manifest.xlsx')
 
     # If there is no nwb_folders filder, then create it.    
     if not os.path.exists('./nwb_files/'):
         os.makedirs('./nwb_files/')
         
-    print(sys.argv)
     main(standard_path, manifest_data)    
