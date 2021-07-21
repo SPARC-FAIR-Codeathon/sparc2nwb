@@ -7,7 +7,7 @@
 [![Issues][issues-shield]][issues-url]
 
 ## Purpose
-This repository holds the code and the supporting files to convert sparc data into NWB format using Python. The repository uses [PyNWB](https://pynwb.readthedocs.io/en/stable/) package. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
+This repository holds the code and the supporting files to convert SPARC data into NWB format using Python. The repository uses [PyNWB](https://pynwb.readthedocs.io/en/stable/) package. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
 
 ## Usage
 1. Create a folder named `data` and drop the sparc dataset in the data folder.
@@ -16,7 +16,7 @@ This repository holds the code and the supporting files to convert sparc data in
 ```shell
 python3 -m pip install requirements.txt
 ```
-4. Change the `standard_path` and `filename` vairables in the main function to get the data and save the nwb files respectivly.
+4. Change the `standard_path` and `filename` vairables in the main function to get the data and save the nwb files respectively.
 5. Run the python script.
 ```shell
 python3 sparc_to_nwb.py
