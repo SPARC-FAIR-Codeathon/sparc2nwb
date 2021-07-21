@@ -22,7 +22,6 @@ python3 -m pip install requirements.txt
 python3 sparc_to_nwb.py
 ```
 
-
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
 
