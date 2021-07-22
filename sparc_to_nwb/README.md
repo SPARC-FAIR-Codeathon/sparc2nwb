@@ -11,17 +11,15 @@ This repository holds the code and the supporting files to convert SPARC data in
 
 ## Usage
 1. Create a folder named `data` and drop the sparc dataset in the data folder.
-2. Create a folder named `nwb_files` to hold all the nwb files created by the python script.
-3. Install the required python dependencies to run the script.
+2. The dependencies required to run the python script are in `requirments.txt`. Install the dependencies.
 ```shell
 python3 -m pip install requirements.txt
 ```
-4. Change the `standard_path` and `filename` vairables in the main function to get the data and save the nwb files respectively.
-5. Run the python script.
+3. Change the `standard_path` and `filename` vairables in the main function to get the data and save the nwb files respectively.
+4. Run the python script.
 ```shell
 python3 sparc_to_nwb.py
 ```
-
 
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
