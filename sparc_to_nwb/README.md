@@ -21,6 +21,37 @@ python3 -m pip install requirements.txt
 python3 sparc_to_nwb.py
 ```
 
+## Conversion of SPARC Data to NWB Data
+<ol>
+<li>The above research paper was used as baseline for conversion of SPARC data to NWB format.</li>
+<li>The NWB file was fed with the metadata information regarding the subject. The metadata information includes age, genotype, subject id, sex, weight, species, and description.
+<ol>
+  <li>The metadata information is extracted from sample and subject data files samples data and subject data respectivly.</li>
+</ol>
+</li>
+<li>Additional metadata including session description, identifier, session start time, file creation data, institution, lab, experimenter, experiment description, related publications, and keywords were added to the NWB File.
+<ol>
+  <li>Institution and Lab records were left blank because of lack of information.</li>
+  <li>The above information is manually retrieved from the experiment website.</li>
+</ol>
+</li>
+<li>Finally the data about neural activity was included in addition to the electrodes data.
+<ol>
+  <li>The information about electrodes includes - x, y, and z co-ordinates, location, and group of the electrode.</li>
+  <li>The information about time series includes - name, description, and the data itself.</li>
+</ol>
+</ol>
+
+Below, we tabulated the information about containers and the data placed in them. Reamining data containers are left untouched for this dataset.
+
+NWB Container | Data
+------------- | ----
+acquisition/events | Neural Activity Data
+general_extracellular_ephys/electrodes | Electrodes Data
+general_subject | Subject Metadata
+intervals/trails | timestamp Metadata
+
+
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
 
