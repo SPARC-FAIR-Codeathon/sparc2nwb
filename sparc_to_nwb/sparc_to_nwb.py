@@ -1,14 +1,28 @@
 import os
+from time import time
 import pandas as pd
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
 import logging
 import pickle
 import pynwb
 from dateutil.tz import tzlocal
 from pynwb.device import Device
 from pynwb.ecephys import ElectrodeGroup
-from pynwb import NWBFile, NWBHDF5IO
+from pynwb import NWBFile, TimeSeries, NWBHDF5IO
+
+# def get_timeseries(n, start_time, frequency):
+#     start_time = datetime.strptime(start_time[:-1], '%Y-%m-%dT%H:%M:%S.%f')
+#     delta_time = 1/1250
+#     added_seconds = timedelta(0, delta_time)
+#     time_series = []
+#     while(n):
+#         n = n-1
+#         start_time = start_time+added_seconds
+#         time_series.append(str(start_time))
+
+#     return (time_series)
+
 
 def convert_to_nwb(data, nwb_file):
 
@@ -16,13 +30,14 @@ def convert_to_nwb(data, nwb_file):
     for i in range(len(data)):
         probe_device = Device(name=str(i+1))
         probe_electrode_group = ElectrodeGroup(
-            name = 'probe_'+str(i+1),
+            name = 'Probe'+str(i+1),
             description = '',
             device = probe_device,
             location = ''
         )
-        
+        nwb_file.add_device(probe_device)
         electrode_groups.append(probe_electrode_group)
+        nwb_file.add_electrode_group(probe_electrode_group)
         
     del_cols = []
     for col in data.columns:
@@ -62,13 +77,16 @@ def convert_to_nwb(data, nwb_file):
     return (nwb_file)
 
 def main(standard_path, manifest_data):
-    
+
     for d in manifest_data['filename']:
         file_path = standard_path+d
         samples_path = '/'.join(standard_path.split('/')[0:-2])+'/samples.xlsx'
         subjects_path = '/'.join(standard_path.split('/')[0:-2])+'/subjects.xlsx'
 
         data = pd.read_excel(file_path, sheet_name='responses')
+        start_timestamp = manifest_data[manifest_data['filename'] == d]['timestamp'].values[0]
+        # time_series = get_timeseries(n=len(data), start_time=start_timestamp, frequency = 1250)
+
         file_name = file_path.split('/')[5] +'_'+ file_path.split('/')[-1].split('.')[0]
         if not os.path.exists('./nwb_files/'+standard_path.split('/')[2]+'/'):
             os.makedirs('./nwb_files/'+standard_path.split('/')[2]+'/')
@@ -105,14 +123,16 @@ def main(standard_path, manifest_data):
                                     'ultrafast neuroimaging technique', 'immunohistochemistry', 
                                     'enteric nervous system ']
                         )
+        # nwb_ts = TimeSeries(name='nwb_testseries', timestamps=time_series)
+        # nwb_file.add_acquisition(nwb_ts)
 
         nwb_file = convert_to_nwb(data, nwb_file)
-        pickle.dump(nwb_file, open(filename, 'wb'))
-        logger.info('Saved', filename)
         
-        # with NWBHDF5IO(filename, 'w') as io:
-        #     io.write(nwb_file)
-        #     logger.info('Saved', filename)
+        io = NWBHDF5IO(filename, 'w')
+        io.write(nwb_file)
+        io.close()
+
+        logger.info('Saved'+str(filename))
 
 if __name__ == '__main__':
     log_format = '%(levelname)s %(asctime)s - %(message)s'
