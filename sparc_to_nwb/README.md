@@ -65,7 +65,7 @@ python3 sparc_to_nwb.py
   </li>
 </ol>
 </li>
-<li>Additional metadata including session description, identifier, session start time, file creation data, institution, lab, experimenter, experiment description, related publications, and keywords were added to the NWB File.
+<li>Additional metadata including session description, identifier, session start time, file creation date, institution, lab, experimenter, experiment description, related publications, and keywords were added to the NWB File.
 <ol>
   <li>Institution and Lab records were left blank because of lack of information.</li>
   <li>The above information is manually retrieved from the experiment website.</li>
