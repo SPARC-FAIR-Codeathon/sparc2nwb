@@ -30,6 +30,7 @@ Click ```Browse``` button and select the folder. When the folder is selected, th
 Type the dataset description in the corresponding entry box. Note that you can provide more than one keyword which is separated by the comma.
 
 ## Covert the data into NWB format
+Click ```Convert``` button to start the conversion. The *Logging information* will display the where the converted files are saved.
 
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
