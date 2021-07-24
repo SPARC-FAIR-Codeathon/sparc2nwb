@@ -38,4 +38,4 @@ Open *sparc_to_nwb.m* in MATLAB and run the script.
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
 [license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
-[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/master/LICENSE
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/LICENSE
