@@ -20,7 +20,13 @@ python3 -m pip install requirements.txt
 import extract_nwb
 
 fpath = r'SPARC\nwb_files\compression_ISP_20180813_G5.nwb'
-data = extract_nwb.EXTRACT_NWB(fpath)
+nwb_data = extract_nwb.EXTRACT_NWB(fpath)
+```
+3. Once the data is loaded, the data can easily be grabbed by using its functions
+```shell
+# EXAMPLE
+nwb_data.get_subject() # get experiment subject information
+nwb_data.get_electrodes() # get electrode data
 ```
 
 ## Module Contains Description
