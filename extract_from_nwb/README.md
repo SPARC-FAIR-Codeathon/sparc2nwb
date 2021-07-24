@@ -22,7 +22,7 @@ python3 sparc_to_nwb.py
 ```
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78009407/126273326-662b5aff-034f-4f48-a62a-69552195ff86.png" />
+  <img src="https://github.com/lifestrugglee/sparc2nwb/blob/main/extract_from_nwb/source_vs_nwb.png" />
 </p>
 
 ## SPARC2NWB Team
