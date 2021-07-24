@@ -7,7 +7,7 @@
 [![Issues][issues-shield]][issues-url]
 
 ## Purpose
-This repository holds the code and the supporting files to convert SPARC data into NWB format using **MATLAB**. The repository runs Python script, *sparc_to_nwb.py*, in MATLAB. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
+This repository holds the code and the supporting files to convert SPARC data into NWB format using **GUI**. The repository runs Python script, *sparc_to_nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
 
 ## Prerequisite
 1. MATLAB
