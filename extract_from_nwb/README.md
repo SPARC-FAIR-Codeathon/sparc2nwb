@@ -9,21 +9,25 @@
 ## Purpose
 This repository presents the code to easily extract the data after the NWB files are created by using our python module,[sparc_to_nwb](https://github.com/lifestrugglee/sparc2nwb/blob/main/sparc_to_nwb/sparc_to_nwb.py). This module not only provides data from basic containers but also other containers and data information as well as detailed descriptions. In other words, users can easily produce further data analysis and manipulation without the concern of unfamiliarity with the NWB format. In addition, due to the diversity of data inside the NWB file, the module can dynamically generate the function to grab the container data if it's not pre-listed. If the cases are even more complicated, users still can grab the original data of NWB format from this module.
 
-## Usage
-- For the data type and the method 
-2. The dependencies required to run the python script are in `requirments.txt`. Install the dependencies.
+
+## Python Usage
+1. The dependencies required to run the python script are in [`requirments.txt`](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/sparc_to_nwb/requirements.txt) in [sparc_to_nwb](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb). Install the dependencies.
 ```shell
 python3 -m pip install requirements.txt
 ```
-3. Change the `standard_path` and `filename` vairables in the main function to get the data and save the nwb files respectively.
-4. Run the python script.
+2. The python example:
 ```shell
-python3 sparc_to_nwb.py
+import extract_nwb
+
+fpath = r'D:\Code\ipython\SPARC\nwb_files\compression_ISP_20180813_G5.nwb'
+data = extract_nwb.EXTRACT_NWB(fpath)
 ```
 
 <p align="center">
   <img src="https://github.com/lifestrugglee/sparc2nwb/blob/main/extract_from_nwb/source_vs_nwb.png" />
 </p>
+
+## MATLAB Usage
 
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
