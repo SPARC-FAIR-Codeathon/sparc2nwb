@@ -23,6 +23,9 @@ fpath = r'D:\Code\ipython\SPARC\nwb_files\compression_ISP_20180813_G5.nwb'
 data = extract_nwb.EXTRACT_NWB(fpath)
 ```
 
+## Module Contains Description
+The figure below indicates the structure design of the module. The lists in green circle are the contain based on [dataset](https://sparc.science/datasets/124?type=dataset&path=files). The lists at the right bottom pink area are the default container of the NWB format which refer to the [paper] (https://www.nature.com/articles/s41597-020-0415-9#Fig2). Additionally, `NWB_SOURCE` also provide the access to the original NWB format of data.
+
 <p align="center">
   <img src="https://github.com/lifestrugglee/sparc2nwb/blob/main/extract_from_nwb/source_vs_nwb.png" />
 </p>
