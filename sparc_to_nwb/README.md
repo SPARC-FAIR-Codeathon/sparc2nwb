@@ -26,7 +26,43 @@ python3 sparc_to_nwb.py
 <li>The above research paper was used as baseline for conversion of SPARC data to NWB format.</li>
 <li>The NWB file was fed with the metadata information regarding the subject. The metadata information includes age, genotype, subject id, sex, weight, species, and description.
 <ol>
-  <li>The metadata information is extracted from sample and subject data files samples data and subject data respectivly.</li>
+  <li>
+    The metadata information is extracted from sample and subject data files samples data and subject data respectivly.
+   <table style="width:100%" align="center">
+   <tr>
+    <th>Metadata</th>
+    <th>Data</th>
+   </tr>
+   <tr>
+    <td>Age</td>
+    <td>Samples Data</td>
+   </tr>
+   <tr>
+    <td>Genotype</td>
+    <td>Samples Data</td>
+   </tr>
+   <tr>
+    <td>Subject ID</td>
+    <td>Samples Data</td>
+   </tr>
+   <tr>
+    <td>Sex</td>
+    <td>Samples Data</td>
+   </tr>
+   <tr>
+    <td>Weight</td>
+    <td>Subject Data</td>
+   </tr>
+   <tr>
+    <td>Species</td>
+    <td>Samples Data</td>
+   </tr>
+   <tr>
+    <td>Description</td>
+    <td>Samples Data</td>
+   </tr>
+  </table> 
+  </li>
 </ol>
 </li>
 <li>Additional metadata including session description, identifier, session start time, file creation data, institution, lab, experimenter, experiment description, related publications, and keywords were added to the NWB File.
