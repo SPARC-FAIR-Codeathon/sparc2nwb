@@ -30,7 +30,7 @@ nwb_data.get_electrodes() # get electrode data
 ```
 
 ## Module Contains Description
-The figure below indicates the structure design of the module. The lists in green circle are the contains based on the [dataset](https://sparc.science/datasets/124?type=dataset&path=files). The lists at the right bottom pink area are the default containers of the NWB format which refer to the [paper](https://www.nature.com/articles/s41597-020-0415-9#Fig2). Additionally, `NWB_SOURCE` also provide the access to the original NWB format of data.
+The figure below indicates the structure design of the module. The lists in green circle are the contains based on the [dataset](https://sparc.science/datasets/124?type=dataset&path=files). The lists at the right bottom pink area are the default containers of the NWB format which refer to the [paper](https://www.nature.com/articles/s41597-020-0415-9#Fig2). Additionally, `NWB_SOURCE` also provides the access to the original NWB format of data.
 
 <p align="center">
   <img src="https://github.com/lifestrugglee/sparc2nwb/blob/main/extract_from_nwb/source_vs_nwb.png" />
