@@ -1,11 +1,11 @@
 import os
-from time import time
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
 import logging
-import pickle
 import pynwb
+from os import path
+from datetime import datetime, timedelta
+from time import time
 from dateutil.tz import tzlocal
 from pynwb.device import Device
 from pynwb.ecephys import ElectrodeGroup
@@ -22,7 +22,6 @@ from pynwb import NWBFile, TimeSeries, NWBHDF5IO
 #         time_series.append(str(start_time))
 
 #     return (time_series)
-
 
 def convert_to_nwb(data, nwb_file):
 
@@ -84,7 +83,7 @@ def main(standard_path, manifest_data):
         subjects_path = '/'.join(standard_path.split('/')[0:-2])+'/subjects.xlsx'
 
         data = pd.read_excel(file_path, sheet_name='responses')
-        start_timestamp = manifest_data[manifest_data['filename'] == d]['timestamp'].values[0]
+        # start_timestamp = manifest_data[manifest_data['filename'] == d]['timestamp'].values[0]
         # time_series = get_timeseries(n=len(data), start_time=start_timestamp, frequency = 1250)
 
         file_name = file_path.split('/')[5] +'_'+ file_path.split('/')[-1].split('.')[0]
@@ -95,8 +94,16 @@ def main(standard_path, manifest_data):
         subject_id = d.split('/')[1]
         session_start_time = manifest_data[manifest_data['filename'] == d]['timestamp'].values[0]
         session_timestamp = datetime.strptime(session_start_time[:-1], '%Y-%m-%dT%H:%M:%S.%f')
-        samples_data = pd.read_excel(samples_path)
-        subjects_data = pd.read_excel(subjects_path)
+        if path.exists(samples_path): 
+            samples_data = pd.read_excel(samples_path)
+        else:
+            logger.error('{} is non-existant.'.format(samples_path))
+            exit()
+            
+        if path.exists(subjects_data):
+            subjects_data = pd.read_excel(subjects_path)
+        else:
+            logger.error('{} is non-existant.'.format(subjects_data))
 
         subject = pynwb.file.Subject(
             age = samples_data[samples_data['subject_id'] == subject_id]['age'].values[0],
@@ -143,5 +150,9 @@ if __name__ == '__main__':
     logger = logging.getLogger()
 
     standard_path = './data/Pennsieve-dataset-124-version-2/files/primary/'
-    manifest_data = pd.read_excel(standard_path+'manifest.xlsx')
+    if path.exists(standard_path+'manifest.xlsx'):
+        manifest_data = pd.read_excel(standard_path+'manifest.xlsx')
+    else:
+        logger.error('{} file is non-existant.'.format(standard_path+'manifest.xlsx'))
+        exit()
     main(standard_path, manifest_data)
