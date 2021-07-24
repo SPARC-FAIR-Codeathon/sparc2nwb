@@ -5,6 +5,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 ## Purpose
 This is the repository for Team 1 of the [2021 SPARC FAIR Codeathon](https://sparc.science/help/2021-sparc-fair-codeathon). Supported by the [NIH Common Fund](https://commonfund.nih.gov/), [SPARC](https://sparc.science/) is an open access data sharing resource with high-value datasets, maps, tools, and computational studies in the field of bioelectronic medicine that ultimately aims to improve targeting for more specifically designed neuromodulation therapies.
@@ -57,4 +58,5 @@ Our team created the tools and the code to convert data and metadata from an [op
 [stars-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
-
+[license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/master/LICENSE
