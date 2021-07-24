@@ -42,7 +42,6 @@ Our team created the tools and the code to convert data and metadata from an [op
 2. Session Metadata (Session Description, Identifier, Session start time, File creation date, Institution, Lab, Experimenter, Experiment Description, Related Publications, and Keywords)
 3. Mechanical stimulus type (i.e., stretch or compression)
 4. Specific neuron within a group that responded to stimulus
-##### More descriptors can be added as metadata as needed.
 
 ## Additional References
 1. https://discover.pennsieve.io/datasets/99
