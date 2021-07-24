@@ -7,15 +7,17 @@
 [![Issues][issues-shield]][issues-url]
 
 ## Purpose
-This repository holds the code and the supporting files to convert SPARC data into NWB format using **GUI**. The repository runs Python script, *sparc_to_nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
+This repository holds the code and the supporting files to convert SPARC data into NWB format using **GUI**. The repository runs *sparc2nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
+
+![image](https://github.com/DerekYJC/sparc2nwb/blob/0f81b210adfc5008ed74f74dd162aa2bde1b5d8d/gui/images/image.png)
 
 ## Prerequisite
-1. MATLAB
-2. Python
-3. [PyNWB](https://pynwb.readthedocs.io/en/stable/) package
+1. Python
+2. [PyNWB](https://pynwb.readthedocs.io/en/stable/) package
+3. [tkinter](https://docs.python.org/3/library/tkinter.html) package
 
 ## Getting started
-Before starting, install the required python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage).
+Before starting, install the required python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage), as well as the **tkinter** package.
 
 In MATLAB, **configure Your System to Use Python**. Detailed instructions are provided on [MATLAB documentation](https://www.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html).
 
