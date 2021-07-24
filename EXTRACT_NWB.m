@@ -1,6 +1,6 @@
 %file_path=('C:\Users\darwinm\Documents\Thompson Lab\Microwire\PatientData\MW2\NWBSaves\compression_ISP_20180813_G5.nwb');
 
-function [metadata_table] = EXTRACT_NWB
+function = EXTRACT_NWB(file_path)
 
 % Extract file name from file_path
 str=[file_path];
