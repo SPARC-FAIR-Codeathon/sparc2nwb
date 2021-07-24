@@ -59,4 +59,4 @@ Our team created the tools and the code to convert data and metadata from an [op
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
 [license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
-[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/master/LICENSE
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/LICENSE
