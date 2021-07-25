@@ -8,7 +8,7 @@
 [![MIT License][license-shield]][license-url]
 
 ## Purpose
-This repository holds the code and the supporting files to convert SPARC data into NWB format with a GUI. The GUI runs Python script, *sparc_to_nwb.py*, and can be used in either **MATLAB** or **Python**. Instructions are provided below to run the code and convert datasets from the SPARC portal to NWB format with the GUI. The GUI code can be customized to fit the dataset that you would like to convert.
+This repository holds the code and the supporting files to convert SPARC data into NWB format.  The Python script, *sparc_to_nwb.py*, is used and functions in either **MATLAB** or **Python**. Instructions are provided below to run the code and convert datasets from the SPARC portal to NWB format. The code can be customized to fit the dataset that you would like to convert.
 
 ## Prerequisites
 1. MATLAB
