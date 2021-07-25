@@ -5,6 +5,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 ## Purpose
 This repository holds the code and the supporting files to convert SPARC data into NWB format using Python. The repository uses [PyNWB](https://pynwb.readthedocs.io/en/stable/) package. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
@@ -108,3 +109,5 @@ intervals/trails | timestamp Metadata
 [stars-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
+[license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/LICENSE
