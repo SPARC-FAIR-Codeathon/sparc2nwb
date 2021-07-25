@@ -8,7 +8,7 @@
 [![MIT License][license-shield]][license-url]
 
 ## Purpose
-This repository holds the code and the supporting files to convert SPARC data into NWB format using **GUI**. The repository runs *sparc2nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
+This repository holds the code and the supporting files to convert SPARC data into NWB format using a **GUI**. The GUI runs *sparc2nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
 
 ![image](https://github.com/DerekYJC/sparc2nwb/blob/0f81b210adfc5008ed74f74dd162aa2bde1b5d8d/gui/images/image.png)
 
@@ -21,16 +21,16 @@ This repository holds the code and the supporting files to convert SPARC data in
 Before starting, install the required python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage), as well as the **tkinter** package.
 
 ## Open the GUI
-Open *sparc2nwb_gui.py* and run the script. The user interface should show up.
+Open *sparc2nwb_gui.py* and run the script. The GUI will appear.
 
 ## Select the folders of the dataset
 Click ```Browse``` button and select the folder. When the folder is selected, the folder path should show up in the *Standard Path* textbox.
 
 ## Provide the dataset description
-Type the dataset description in the corresponding entry box. Note that you can provide more than one keyword which is separated by the comma.
+Type the dataset description in the corresponding entry box. Note that you can provide more than one keyword separated commas.
 
 ## Covert the data into NWB format
-Click ```Convert``` button to start the conversion. The *Logging information* will display the where the converted files are saved.
+Click ```Convert``` button to start the conversion. The *Logging information* will display where the converted files are saved.
 
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
