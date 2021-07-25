@@ -8,7 +8,7 @@
 [![MIT License][license-shield]][license-url]
 
 ## Purpose
-This repository details how to extract data and metadata from a NWB file with either Matlab or Python.
+This repository details how to extract data and metadata from a NWB file with either Matlab or Python APIs.
 
 ## Extract NWB file data in Matlab using `EXTRACT_NWB.m` function
 `EXTRACT_NWB.m` is a function that:
