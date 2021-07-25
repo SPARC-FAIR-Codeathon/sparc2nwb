@@ -1,7 +1,7 @@
 % ---Function 'EXTRACT_NWB'---
 % Loads NWB file into Matlab, 
-% extracts data and metadata from NWB file,
-% and creates table with metadata.
+% extracts selected data and metadata from NWB file,
+% and creates table with selected metadata.
 %
 % Input instructions: file_path is the location of the NWB file 
 %
