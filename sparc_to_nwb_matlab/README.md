@@ -18,7 +18,7 @@ This repository holds the code and the supporting files to convert SPARC data in
 ## Getting started
 Before starting, install the required python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage).
 
-In MATLAB, **configure Your System to Use Python**. Detailed instructions are provided on [MATLAB documentation](https://www.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html).
+In MATLAB, **configure your system to use Python**. Detailed instructions are provided on [MATLAB documentation](https://www.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html).
 
 ## Define customized values in *sparc_to_nwb.py*
 In *sparc_to_nwb.py*, change the values (e.g., ```standard_path```, ```experimenter```, ```experiment_descriptioni```, ```related_publications```, ```keywords```, etc.) for personalized usage.
