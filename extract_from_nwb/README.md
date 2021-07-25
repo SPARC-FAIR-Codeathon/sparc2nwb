@@ -10,7 +10,7 @@
 ## Purpose
 This repository details how to extract data and metadata from a NWB file with either Matlab or Python APIs.
 
-## Extract NWB file data in Matlab using `EXTRACT_NWB.m` function
+## Extract NWB file data with Matlab-based API
 `EXTRACT_NWB.m` is a function that:
 1. Loads the selected NWB file into Matlab
 2. Extracts relevant data and metadata from NWB file 
@@ -35,7 +35,7 @@ The `NWB Tree` UI shows the user where to find certain data and metadata.
 
 More information pertaining to how to extract data from a NWB file in Matlab can be found [here](https://neurodatawithoutborders.github.io/matnwb/tutorials/html/basicUsage.html).
 
-## Extract NWB file data in Python using `extract_nwb.py` 
+## Extract NWB file data with Python-based API 
 1. The dependencies required to run the python script are in [`requirments.txt`](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/sparc_to_nwb/requirements.txt) in [sparc_to_nwb](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb). They will need to be installed prior to continuing.
 ```shell
 python3 -m pip install requirements.txt
