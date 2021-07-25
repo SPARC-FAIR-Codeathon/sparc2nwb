@@ -5,6 +5,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 ## Purpose
 This repository holds the code and the supporting files to convert SPARC data into NWB format using **GUI**. The repository runs *sparc2nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
@@ -19,13 +20,17 @@ This repository holds the code and the supporting files to convert SPARC data in
 ## Getting started
 Before starting, install the required python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage), as well as the **tkinter** package.
 
-In MATLAB, **configure Your System to Use Python**. Detailed instructions are provided on [MATLAB documentation](https://www.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html).
+## Open the GUI
+Open *sparc2nwb_gui.py* and run the script. The user interface should show up.
 
-## Define customized values in *sparc_to_nwb.py*
-In *sparc_to_nwb.py*, change the values (e.g., ```standard_path```, ```experimenter```, ```experiment_descriptioni```, ```related_publications```, ```keywords```, etc.) for personalized usage.
+## Select the folders of the dataset
+Click ```Browse``` button and select the folder. When the folder is selected, the folder path should show up in the *Standard Path* textbox.
 
-## Convert SPARC data to NWB format
-Open *sparc_to_nwb.m* in MATLAB and run the script.
+## Provide the dataset description
+Type the dataset description in the corresponding entry box. Note that you can provide more than one keyword which is separated by the comma.
+
+## Covert the data into NWB format
+Click ```Convert``` button to start the conversion. The *Logging information* will display the where the converted files are saved.
 
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
@@ -36,3 +41,5 @@ Open *sparc_to_nwb.m* in MATLAB and run the script.
 [stars-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
+[license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/LICENSE
