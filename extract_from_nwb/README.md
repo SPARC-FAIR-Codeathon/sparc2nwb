@@ -40,7 +40,7 @@ More information pertaining to how to extract data from a NWB file in Matlab can
 ```shell
 python3 -m pip install requirements.txt
 ```
-2. Download the `extract_nwb.py` to your local folder.
+2. Download the [`extract_nwb.py`](https://github.com/lifestrugglee/sparc2nwb/blob/main/extract_from_nwb/extract_nwb.py) to your local folder.
 3. Utilize the script like the followings:
 ```shell
 import extract_nwb
