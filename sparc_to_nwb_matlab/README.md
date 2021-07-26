@@ -5,22 +5,23 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 ## Purpose
-This repository holds the code and the supporting files to convert SPARC data into NWB format using **MATLAB**. The repository runs Python script, *sparc_to_nwb.py*, in MATLAB. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
+This repository holds the code and the supporting files to convert SPARC data into NWB format.  The Python script, *sparc_to_nwb.py*, is used and functions in either **MATLAB** or **Python**. Instructions are provided below to run the code and convert datasets from the SPARC portal to NWB format. The code can be customized to fit the dataset that you would like to convert.
 
-## Prerequisite
+## Prerequisites
 1. MATLAB
 2. Python
 3. [PyNWB](https://pynwb.readthedocs.io/en/stable/) package
 
 ## Getting started
-Before starting, install the required python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage).
+Before starting, install the required Python dependencies mentioned [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb#usage).
 
-In MATLAB, **configure Your System to Use Python**. Detailed instructions are provided on [MATLAB documentation](https://www.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html).
+In MATLAB, **configure your system to use Python**. Detailed instructions are provided on [MATLAB documentation](https://www.mathworks.com/help/matlab/matlab_external/install-supported-python-implementation.html).
 
 ## Define customized values in *sparc_to_nwb.py*
-In *sparc_to_nwb.py*, change the values (e.g., ```standard_path```, ```experimenter```, ```experiment_descriptioni```, ```related_publications```, ```keywords```, etc.) for personalized usage.
+In *sparc_to_nwb.py*, the user is able to change the values (e.g., ```standard_path```, ```experimenter```, ```experiment_descriptioni```, ```related_publications```, ```keywords```, etc.) for usage with datasets with different structures and needs.
 
 ## Convert SPARC data to NWB format
 Open *sparc_to_nwb.m* in MATLAB and run the script.
@@ -34,3 +35,5 @@ Open *sparc_to_nwb.m* in MATLAB and run the script.
 [stars-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
+[license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/LICENSE

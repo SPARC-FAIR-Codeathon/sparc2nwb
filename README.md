@@ -5,6 +5,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 ## Purpose
 This is the repository for Team 1 of the [2021 SPARC FAIR Codeathon](https://sparc.science/help/2021-sparc-fair-codeathon). Supported by the [NIH Common Fund](https://commonfund.nih.gov/), [SPARC](https://sparc.science/) is an open access data sharing resource with high-value datasets, maps, tools, and computational studies in the field of bioelectronic medicine that ultimately aims to improve targeting for more specifically designed neuromodulation therapies.
@@ -29,11 +30,6 @@ Our project goal is to improve the readability and accessibility of SPARC data b
 The NWB file format allows users to store raw and processed data and associated metadata in a single, standardized format. Common file formats used in experimentation (e.g., .csv, .xlsx, .json, .m, .py) can be converted into .nwb format and the stored file information can then be extracted into the programming language of choice (i.e., Matlab, Python, C++) for processing and analyses. NWB is a dynamic format and does not have a stable folder structure for storing data across domains. Instead, the folder structure heavily depends on the study experimentation process and the type of data that was collected. The figure below illustrates the data storage structure for electrophysiological data, as an example ([Source](https://www.nature.com/articles/s41597-020-0415-9#Fig2)).
 ![image](https://user-images.githubusercontent.com/78009407/126580017-5fe43593-0bd0-419c-b3c1-bfc652f1b6c5.png)
 
-
-## Conversion of SPARC data to NWB format
-
-[under construction]
-
 ### Description of data used to develop the pipeline
 Our team created the tools and the code to convert data and metadata from an [optophysiological study dataset](https://sparc.science/datasets/124?type=dataset&path=files) within the SPARC portal into NWB format. The study [(protocol here](https://www.protocols.io/view/mechanosensitive-enteric-neurons-incidence-and-abu-bpcamise), [manuscript here)](https://www.nature.com/articles/s41598-020-70216-6) aimed to characterize porcine and human neuronal responses to mechanical compression and tension using immunohisochemical techniques.
 
@@ -43,13 +39,10 @@ Our team created the tools and the code to convert data and metadata from an [op
 2. Neuronal response (i.e., changes in fluorescence in response to stimulus)
 
 #### Converted metadata includes: 
-1. Study subject ID
-2. Mechanical stimulus type (i.e., stretch or compression)
-3. Specific neuron within a group that responded to stimulus
-##### More descriptors can be added as metadata as needed.
-
-### Step 2: Extract data from NWB file with Matlab- and Python-based APIs for analyses
-
+1. Subject Metadata (Age, Genotype, Subject ID, Sex, Weight, Species, and Description)
+2. Session Metadata (Session Description, Identifier, Session start time, File creation date, Institution, Lab, Experimenter, Experiment Description, Related Publications, and Keywords)
+3. Mechanical stimulus type (i.e., stretch or compression)
+4. Specific neuron within a group that responded to stimulus
 
 ## Additional References
 1. https://discover.pennsieve.io/datasets/99
@@ -65,4 +58,5 @@ Our team created the tools and the code to convert data and metadata from an [op
 [stars-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
 [issues-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/issues
-
+[license-shield]: https://img.shields.io/github/license/SPARC-FAIR-Codeathon/sparc2nwb.svg?style=flat-square
+[license-url]: https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/blob/main/LICENSE

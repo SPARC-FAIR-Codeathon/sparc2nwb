@@ -1,6 +1,13 @@
-%file_path=('C:\Users\darwinm\Documents\Thompson Lab\Microwire\PatientData\MW2\NWBSaves\compression_ISP_20180813_G5.nwb');
+% ---Function 'EXTRACT_NWB'---
+% Loads NWB file into Matlab, 
+% extracts selected data and metadata from NWB file,
+% and creates table with selected metadata.
+%
+% Input instructions: file_path is the location of the NWB file 
+%
+% Marielle L. Darwin | SPARC Codeathon 2021 | Updated: July 25 2021 
 
-function = EXTRACT_NWB(file_path)
+function EXTRACT_NWB(file_path)
 
 % Extract file name from file_path
 str=[file_path];
@@ -32,7 +39,7 @@ util.nwbTree(nw);
     % Weight 
     weight=convertCharsToStrings(nw.general_subject.('weight'));
 
- % Create table with subject metadata
+ % Create output table with subject metadata
   % Create column for metadata values
         % Define component cell arrays
         v1={age};
@@ -76,4 +83,3 @@ util.nwbTree(nw);
    % Combine columns into a single table
         metadata_table=[Column_Metadata Column_Value]
 end
-
