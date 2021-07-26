@@ -45,7 +45,20 @@ The research community has recognized the critical nature of this crisis and has
 #### Step 1: Find dataset you wish to convert to NWB format from the [SPARC Portal](https://sparc.science/)
 
 #### Step 2: View template to determine if the chosen dataset complies with the structure of our tools
-If the dataset is in the same raw storage format, use GUI to enter the dataset file path and convert to NWB file. If it is in a different format, you can either manipulate the format of the raw dataset or alter the conversion script to convert to NWB according to your specific needs. 
+
+##### Template dataset structure
+The current conversion APIs in the following step require the user to organize the dataset in the format of the template dataset structure below.
+![image](https://github.com/DerekYJC/sparc2nwb/blob/d4407d9b98d01077c8ac3e827b5a3ab2137be5de/images/template_datastructure.jpg)
+
+In the *manifest.xlsx*, ```filename``` represents the dataset filename **including the path**, and ```timestamp``` represents the time of the experiment to be acquired.
+![image](https://github.com/DerekYJC/sparc2nwb/blob/d4407d9b98d01077c8ac3e827b5a3ab2137be5de/images/template_manifest.jpg)
+
+In the *samples.xlsx*, the following data columns are required, including ```subject_id```, ```age```, ```specimen type```, ```sex```, ```species```, ```protocol title```, ```specimen```, and ```anatomical location```.
+
+In the *subjects.xlsx*, the following data columns are required, including ```subject_id```, and ```Weight_kg```.
+![image](https://github.com/DerekYJC/sparc2nwb/blob/d4407d9b98d01077c8ac3e827b5a3ab2137be5de/images/template_samples_subjects.jpg)
+
+If the dataset is in the same raw storage format, use the [GUI](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/gui) in the following step to enter the dataset file path and convert to NWB file. If it is in a different format, you can either manipulate the format of the raw dataset or alter the [conversion script](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb) in the following step to convert to NWB according to your specific needs. 
 
 #### Step 3: Convert the raw data files to NWB format
 You have three options for converting your data to NWB format. Documentation and further instruction regarding these tools can be found in the respective folders within this repository.
