@@ -18,7 +18,7 @@ A major problem our team has identified is that data within the [SPARC Portal](h
 ![image](https://user-images.githubusercontent.com/78009407/126266615-45145c58-d560-4ffb-a855-67334e6530e8.png)
 
 ### Creating a Solution
-Our project goal is to improve the readability and accessibility of SPARC data by standardizing the format in which the data is stored. We will achieve this goal by first converting raw data stored on the SPARC portal into NWB format. Once the data is in NWB format, we will then create APIs to extract the data out of the NWB files so that researchers can manipulate the data for analyses in multiple programming languages. 
+Our project goal was to improve the readability and accessibility of SPARC data by standardizing the format in which the data is stored. We achieved this goal by first converting raw data stored on the [SPARC Portal](https://sparc.science/) into NWB format. Once the data was in NWB format, we then created APIs to extract the data out of the NWB files so that researchers can manipulate the data for analyses in multiple programming languages. 
 
 ![image](https://user-images.githubusercontent.com/78009407/126270243-286a0091-967a-4d71-8031-e33939a435ef.png)
 
@@ -31,23 +31,53 @@ The NWB file format allows users to store raw and processed data and associated 
 ![image](https://user-images.githubusercontent.com/78009407/126580017-5fe43593-0bd0-419c-b3c1-bfc652f1b6c5.png)
 
 ### Description of data used to develop the pipeline
-Our team created the tools and the code to convert data and metadata from an [optophysiological study dataset](https://sparc.science/datasets/124?type=dataset&path=files) within the SPARC portal into NWB format. The study [(protocol here](https://www.protocols.io/view/mechanosensitive-enteric-neurons-incidence-and-abu-bpcamise), [manuscript here)](https://www.nature.com/articles/s41598-020-70216-6) aimed to characterize porcine and human neuronal responses to mechanical compression and tension using immunohisochemical techniques.
+Our team created the tools and the code to convert data and metadata from an [optophysiological study dataset](https://sparc.science/datasets/124?type=dataset&path=files) within the [SPARC Portal](https://sparc.science/) into NWB format. The study [(protocol here](https://www.protocols.io/view/mechanosensitive-enteric-neurons-incidence-and-abu-bpcamise), [manuscript here)](https://www.nature.com/articles/s41598-020-70216-6) aimed to characterize porcine and human neuronal responses to mechanical compression and tension using immunohisochemical techniques.
 
-### Step 1: Convert raw data in SPARC Portal into NWB format using Python
-#### Converted data includes: 
+#### Rationale for choosing [this dataset](https://sparc.science/datasets/124?type=dataset&path=files) to illustrate the use of our tools
+We chose this dataset to illustrate the use of our tools for multiple reasons. First, optophysiological research methods are common within the [SPARC Portal](https://sparc.science/). By providing a template to convert this type of data to NWB, our project outcomes have a high impact in that more users can utilize our tools with minimal changes needed. We document the process of how we built the NWB file structure so that users can tailor our tools for different types of data as well.
+
+Second, when choosing this dataset, we considered the impact potential and what would be helpful for the field. We ultimately chose to work with optophysiological data from a study that tested the neuronal response to mechanical stimulation in the porcine colon. This research contributed to investigating the underlying factors of inflammatory bowel disease (IBD), a condition which is a steeply growing public health crisis. 
+
+The research community has recognized the critical nature of this crisis and has committed large amounts of resources to investigate the underlying factors of IBD. There has been consistently large amounts of publications regarding colon disease over recent years and the field is in need of comparative studies of neuronal mechanisms across species. These factors highlight the importance of open communication and data sharing in this subfield. Colon disease research is desperately needed, but the data is hard to access. We therefore chose an optophysiological dataset as this type of data would be highly relevant for SPARC users, and we chose to convert data from the field of colon disease research as this is a consistently rising area of study within the field. 
+
+### User guide
+
+#### Step 1: Find dataset you wish to convert to NWB format from the [SPARC Portal](https://sparc.science/)
+
+#### Step 2: View template to determine if the chosen dataset complies with the structure of our tools
+If the dataset is in the same raw storage format, use GUI to enter the dataset file path and convert to NWB file. If it is in a different format, you can either manipulate the format of the raw dataset or alter the conversion script to convert to NWB according to your specific needs. 
+
+#### Step 3: Convert the raw data files to NWB format
+You have three options for converting your data to NWB format. Documentation and further instruction regarding these tools can be found in the respective folders within this repository.
+* Option 1: [Use Python-based GUI](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/gui) 
+* Option 2: [Use conversion script script in Python](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb)
+* Option 3: [Use conversion script in Matlab](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb_matlab)
+
+##### In this example, converted data within the NWB file includes: 
 1. Timeframe (i.e., timestamp in frame number)
 2. Neuronal response (i.e., changes in fluorescence in response to stimulus)
 
-#### Converted metadata includes: 
+##### And converted metadata within the NWB file ncludes: 
 1. Subject Metadata (Age, Genotype, Subject ID, Sex, Weight, Species, and Description)
 2. Session Metadata (Session Description, Identifier, Session start time, File creation date, Institution, Lab, Experimenter, Experiment Description, Related Publications, and Keywords)
 3. Mechanical stimulus type (i.e., stretch or compression)
 4. Specific neuron within a group that responded to stimulus
 
+##### Further documentation regarding where the raw data is stored within the NWB file during the conversion process is located [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/sparc_to_nwb).
+
+#### Step 4: Extract (meta)data out of NWB file 
+You can extract the desired (meta)data out of the NWB file using either Matlab- or Python-based APIs located [here](https://github.com/SPARC-FAIR-Codeathon/sparc2nwb/tree/main/extract_from_nwb). Further documentation regarding how to navigate the contents of the NWB file are included within the folder contents.
+
+#### Step 5: Process and analyze (meta)data 
+You are now able to view and manipulate the contents of the dataset in either Python or Matlab.
+
 ## Additional References
 1. https://discover.pennsieve.io/datasets/99
 2. https://github.com/SteinmetzLab/dataToNWB/tree/master/visualDiscriminationNeuropixels
 3. https://pynwb.readthedocs.io/en/stable/
+
+## Manuscipt
+A manuscript that details the process of creating these tools, including open source code and data used in our project, is currently in progress. Check back soon!
 
 ## SPARC2NWB Team
 [Marielle Darwin](https://github.com/mldarwin) | [Ananth Reddy](https://github.com/anbhimi) | [Derek Chang](https://github.com/DerekYJC) | [Patrick Chuang](https://github.com/lifestrugglee)
