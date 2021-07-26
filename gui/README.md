@@ -10,7 +10,7 @@
 ## Purpose
 This repository holds the code and the supporting files to convert SPARC data into NWB format using a **GUI**. The GUI runs *sparc2nwb_gui.py*. Instructions are provided below to run the code and convert datasets from sparc to NWB format.
 
-![image](https://github.com/DerekYJC/sparc2nwb/blob/0f81b210adfc5008ed74f74dd162aa2bde1b5d8d/gui/images/image.png)
+![image](https://github.com/DerekYJC/sparc2nwb/blob/8e0dc137ff5aa3eea7f99037709c67c61f60f374/gui/images/image.png)
 
 ## Prerequisite
 1. Python
