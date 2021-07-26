@@ -44,6 +44,19 @@ Our team created the tools and the code to convert data and metadata from an [op
 3. Mechanical stimulus type (i.e., stretch or compression)
 4. Specific neuron within a group that responded to stimulus
 
+#### Template dataset structure
+The current conversion API requires the user to organize the dataset in the format of the template dataset structure below.
+![image](https://github.com/DerekYJC/sparc2nwb/blob/d4407d9b98d01077c8ac3e827b5a3ab2137be5de/images/template_datastructure.jpg)
+
+In the *manifest.xlsx*, ```filename``` represents the dataset filename **including the path**, and ```timestamp``` represents the time of the experiment to be acquired.
+![image](https://github.com/DerekYJC/sparc2nwb/blob/d4407d9b98d01077c8ac3e827b5a3ab2137be5de/images/template_manifest.jpg)
+
+In the *samples.xlsx*, the following data columns are required, including ```subject_id```, ```age```, ```specimen type```, ```sex```, ```species```, ```protocol title```, ```specimen```, and ```anatomical location```.
+
+In the *subjects.xlsx*, the following data columns are required, including ```subject_id```, and ```Weight_kg```.
+![image](https://github.com/DerekYJC/sparc2nwb/blob/d4407d9b98d01077c8ac3e827b5a3ab2137be5de/images/template_samples_subjects.jpg)
+
+
 ## Additional References
 1. https://discover.pennsieve.io/datasets/99
 2. https://github.com/SteinmetzLab/dataToNWB/tree/master/visualDiscriminationNeuropixels
